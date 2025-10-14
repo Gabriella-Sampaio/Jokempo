@@ -1,0 +1,29 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.containerHead{
+    padding: 20px 40% 20px 30%;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.pontuacao{
+    margin: 10px 5% 10px 5%;
+
+}
+
+.itemPontuacao{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: bisque;
+}
+
+.jogadas{
+    margin: 10px 5% 10px 5%;
+    display: flex;
+
+    gap: 10px;
+}
