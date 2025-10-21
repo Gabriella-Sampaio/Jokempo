@@ -5,6 +5,8 @@ document.querySelectorAll('.choice').forEach(button => {
         const computerChoice = getComputerChoice();
         console.log("eu", playerChoice);
         let winner;
+        let art;
+
         // const winner = determineWinner(playerChoice, computerChoice);
         // updateScores(winner);
         // showResult(playerChoice, computerChoice, winner);
@@ -14,19 +16,23 @@ document.querySelectorAll('.choice').forEach(button => {
 
         if(playerChoice === computerChoice){
             winner = "Empate"
+            art = "🤝"
         }
 
         else if((playerChoice == "tesoura" && computerChoice == "papel") || 
             (playerChoice == "papel" && computerChoice == "pedra") ||
             (playerChoice == "pedra" && computerChoice == "tesoura")){
-            winner = "🎈🎊🎉 Jogador Vence 🎉🎊🎈"
+            winner = "Jogador Vence"  
+            art = "🎈🎉🥳 ( ˶ˆᗜˆ˵ ) 🥳🎉🎈"
         }
 
         else{
             winner = "Computador vence"
+            art = "(╥﹏╥)🥀"
         }
 
         document.getElementById("resultado").innerHTML = "Resultado - " + winner;
+        document.getElementById("art").innerHTML = art;
 
     });
 });
@@ -38,4 +44,6 @@ function getComputerChoice() {
     console.log("computador", choices[randomIndex]);
     return choices[randomIndex];
 }
+
+
 
